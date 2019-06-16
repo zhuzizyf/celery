@@ -1,6 +1,6 @@
 # trigger.py
 
-from tasks import long_task
+from tasks import long_task,file_task
 
 import time
 
@@ -30,5 +30,6 @@ if __name__ == "__main__":
     #     # print(result)
     #     time.sleep(1)
     #     result = taskstatus(task.id)
-    for _ in range(4):
-        long_task.apply_async()
+    for _ in range(100):
+        file_task.apply_async()
+        time.sleep(0.1)
